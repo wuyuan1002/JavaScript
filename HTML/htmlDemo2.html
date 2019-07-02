@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象</title>
+
+    <script>
+        /**
+         *  *******除了基本数据类型其余所有的都是对象*******
+         *
+         * 对象的分类:
+         *    1).内建对象
+         *      - 由ES标准中定义的对象，在任何ES的实现中都可以使用。
+         *        比如 Math, String, Number, Boolean, Function, Object, ...
+         *
+         *    2).宿主对象
+         *      - 由JS运行时环境提供的对象，主要是由浏览器提供的对象
+         *        比如 Bom, Dom
+         *
+         *    3).自定义对象
+         *      -由开发人员自己创建的对象
+         *
+         */
+
+
+        /*
+         * 创建对象 --- 对象的属性值可以是任意数据类型，基本数据类型和对象都行
+         *
+         * 创建对象的两种方式：
+         *  1.直接new --> var obj = new Object();
+         *  2.使用对象字面量来创建 --> var obj = {};
+         *      var obj = {};可以直接在{}中写对象的属性
+         *      如：var obj = {
+         *                  name:"wy",
+         *                  age:23,
+         *                  sex:"男",
+         *                  test:{
+         *                      name:"shx"
+         *                  }
+         *              };
+         */
+        let obj = new Object();
+        // var obj = {};
+
+        //查看对象类型
+        console.log(typeof obj);
+
+        //向对象obj中添加name属性
+        obj.name = "wuyuan";
+        //向对象obj中添加age属性
+        obj.age = 23;
+        //向对象obj中添加waihao属性
+        obj["waihao"] = "wukuai";
+
+
+        //获取对象中的属性
+        console.log(obj);
+        console.log(obj.name);
+        console.log(obj.age);
+        console.log(obj["waihao"]);
+        console.log(obj.sex);//获取没有定义的对象属性时不会报错而是会输出undefined
+
+        //修改直接覆盖即可
+        obj.age = 22;
+
+        //删除对象的属性  --- 删除后属性变成了undefined
+        delete obj.name;
+        console.log(obj.name);
+
+        //检查某对象中是否有某属性
+        console.log("name" in obj);
+        console.log("age" in obj);
+
+        //枚举对象中的属性
+        for (let n in obj) {
+            console.log("属性名：" + n + "，属性值：" + obj[n]);
+        }
+
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

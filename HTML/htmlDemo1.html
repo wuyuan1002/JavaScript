@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javaScript</title>
+
+    <script>
+        /**
+         * 1.. js编写的位置有:
+         *   1).某些标签的属性中  -> 03.
+         *   2).<script>标签里  -> 02.
+         *   3).外部js文件  -> 01.
+         *
+         *
+         * 2.. js代码的执行顺序是按照页面中代码的编写顺序一行一行往下顺序执行的。
+         * 3.. js严格区分大小写。
+         * 4.. js有6种基本数据类型(String,Number,Boolean,Undefind,Null,Symbol)，
+         *     3种复合数据类型(Object,Array,Function)。
+         *
+         *     Undefind是已创建但还没有赋初值的变量的默认值。
+         *     Null表示一个空对象(Object)。
+         *
+         *
+         * 5.. JS的作用域：
+         *
+         *      1- 全局作用域
+         *          - 在<script>标签中写的都是全局作用域，包括变量和函数等。
+         *          - 全局作用域中的变量和函数在整个标签中都可以使用。
+         *          - 全局作用域在页面打开时创建，页面关闭时销毁。
+         *          - 在全局作用域中有一个全局对象 window ，代表着当前浏览器窗口。
+         *            它由浏览器创建，我们可以直接使用。
+         *            我们在全局作用域中创建的变量和函数都会作为 window 对象的属性和方法保存。
+         *
+         *      2- 函数作用域
+         *          - 在某个函数中声明得变量和函数，调用函数时创建，函数结束后销毁，只能在该函数内访问得到。每调用一次该函数就会创建一次该函数的作用域。
+         *          - var在某个函数内声明的变量是函数作用域。
+         *          - let在某个函数内的某个代码块中(如 for循环中)声明的变量只能在该代码块中有效。
+         *          - 若名称相同，作用域小的会覆盖比它的作用域比它大的作用域的值。
+         *
+         *
+         */
+    </script>
+
+
+    <!-- 01. -->
+    <script type="text/javascript" src="../JS/jsDemo1.js"></script>
+
+
+    <!-- 02. -->
+    <script>
+        alert("先执行页面的该js脚本，再执行引入的js脚本");
+
+        function myfunction() {
+            alert("myfunction");
+        }
+
+    </script>
+
+
+</head>
+<body>
+
+<!-- 03. -->
+<button onclick="alert('你点我了！！');">点我一下</button>
+<button onclick="myfunction();">也点我一下</button>
+
+
+</body>
+</html>

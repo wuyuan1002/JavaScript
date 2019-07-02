@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function breakfack() {
+            return ["豆浆", "面包", "包子"]//返回数组
+        }
+
+        console.log(breakfack());
+        let [a, b, c] = breakfack();//解构
+        console.log(a);
+        console.log(b);
+        console.log(c);
+
+        //解构赋值
+        function breakfack1() {
+            return {doujiang: "豆浆", mianbgo: "面包", baozi: "包子"};//返回对象
+        }
+
+        let {doujiang: doujiang1, mianbgo: mianbao1, baozi: baozi1} = breakfack1();//解构
+        console.log(doujiang1, mianbao1);
+
+        //字符串模板
+        let desert = "面包";
+        let breakfack2 = `今天早上吃的是${desert}`;//引用
+        console.log(breakfack2);
+
+        //展开操作符
+        let breakfack3 = ["面包", "豆浆", "稀饭"];
+        let foods1 = ["炸鸡", breakfack3];
+        console.log(foods1);
+        console.log(...foods1);
+        let foods2 = ["炸鸡", ...breakfack3];
+        console.log(foods2);
+        console.log(...foods2);
+
+        //剩余操作符
+        function breakf(bread, ...fesk3) {
+            console.log(bread);
+            console.log(fesk3);
+        }
+
+        breakf("acd", "a", "f", "vf", "jcn", "iweu");
+
+        //class关键字
+        class person {
+            constructor(food) {
+                this.foods = food;
+            }
+
+            cook() {
+                console.log(this.foods);
+            }
+        }
+
+        let wuyuan = new person("西红柿");
+        wuyuan.cook();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
