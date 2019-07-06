@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+
+        function Rectangle(l, w) {
+            this.length = l;
+            this.width = w;
+            this.ares = function () {
+                return this.length * this.width;
+            }
+        }
+
+        function Cuboid(l, w, h) {
+            Rectangle.call(this, l, w);
+            this.height = h;
+            this.volume = function () {
+                return this.width * this.length * this.height;
+            };
+            this.ares = function () {
+                return 2 * (this.length * this.width + this.width * this.height + this.height * this.length);
+            }
+        }
+
+        Cuboid.prototype = new Rectangle();
+
+    </script>
+</head>
+<body>
+</body>
+</html>

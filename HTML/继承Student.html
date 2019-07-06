@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function Person(name,sex){
+				this.name = name;
+				this.sex = sex;
+				this.intor = ()=>{
+					console.log(this.name);
+				}
+			}
+			
+			function Student(name,sex,score){
+				this.score = score;
+				Person.call(this,name,sex);
+				this.sayScore = ()=>{
+					console.log(this.score);
+				}
+			}
+			
+			Student.prototype = new Person();
+			let s1 = new Student("wy","nan","100");
+			let s2 = new Student("wyj","nv","100");
+			s1.intor();
+			s2.intor();
+			console.log(s1 instanceof Student);
+			console.log(s1 instanceof Person);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
