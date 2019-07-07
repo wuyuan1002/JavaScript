@@ -1,75 +1,75 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-	</head>
-	<script type="text/javascript">
-//		let m = {
-//			area: function() {
-//				return this.r * Math.PI;
-//			},
-//			primeter: function() {
-//				return this.r * 2 * Math.PI;
-//			}
-//		}
-//
-//		function Circle(r) {
-//			this.r = r;
-//		}
-//		
-//		Circle.prototype = m;
-//		m.constructor = Circle;
-//		
-//		let c = new Circle(10);
-//		console.log(c instanceof Circle);
-//		console.log(c.area());
-		
-		
-		
-//		function Circle(r){
-//			this.r = r;
-//		}
-//		Circle.prototype = {
-//			area: function() {
-//				return this.r * Math.PI;
-//			},
-//			primeter: function() {
-//				return this.r * 2 * Math.PI;
-//			},
-//			constructor : Circle
-//		}
-//		
-//		let c = new Circle(10);
-//		console.log(c instanceof Circle);
-//		console.log(c.area());
-//		console.log(c.constructor);
-		
-		
-		function Basic(){
-			this.area = function() {
-				return this.r * Math.PI;
-			};
-			this.primeter = function() {
-				return this.r * 2 * Math.PI;
-			}
-		}
-		
-		function Circle(r){
-			this.r = r;
-		}
-		Circle.prototype = new Basic();
-		
-		let c = new Circle(10);
-		console.log(c instanceof Circle);
-		console.log(c instanceof Basic);
-		console.log(c.area());
-		console.log(c.constructor);
-		
-	</script>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<script type="text/javascript">
+    //		let m = {
+    //			area: function() {
+    //				return this.r * Math.PI;
+    //			},
+    //			primeter: function() {
+    //				return this.r * 2 * Math.PI;
+    //			}
+    //		}
+    //
+    //		function Circle(r) {
+    //			this.r = r;
+    //		}
+    //
+    //		Circle.prototype = m;
+    //		m.constructor = Circle;
+    //
+    //		let c = new Circle(10);
+    //		console.log(c instanceof Circle);
+    //		console.log(c.area());
 
-	<body>
-	</body>
+
+    //		function Circle(r){
+    //			this.r = r;
+    //		}
+    //		Circle.prototype = {
+    //			area: function() {
+    //				return this.r * Math.PI;
+    //			},
+    //			primeter: function() {
+    //				return this.r * 2 * Math.PI;
+    //			},
+    //			constructor : Circle
+    //		}
+    //
+    //		let c = new Circle(10);
+    //		console.log(c instanceof Circle);
+    //		console.log(c.area());
+    //		console.log(c.constructor);
+
+
+    function Basic() {
+        this.area = function () {
+            return this.r * Math.PI;
+        };
+        this.primeter = function () {
+            return this.r * 2 * Math.PI;
+        }
+    }
+
+    function Circle(r) {
+        this.r = r;
+    }
+
+    Circle.prototype = new Basic();
+
+    let c = new Circle(10);
+    console.log(c instanceof Circle);
+    console.log(c instanceof Basic);
+    console.log(c.area());
+    console.log(c.constructor);
+
+</script>
+
+<body>
+</body>
 
 </html>
