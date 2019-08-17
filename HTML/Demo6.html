@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组</title>
+
+    <script>
+        /**
+         * 数组也是函数对象。是Array函数的实例。
+         *
+         * - JS的数组长度可变，数组中元素类型可以不同。
+         */
+
+        //1.创建一个数组对象 --> 两种方式
+
+        // let arr = new Array();
+        let arr = [];
+        // let arr = [14,54,34,56,82];
+
+        //2.向数组中添加元素
+        arr[0] = 12;
+        arr[1] = "wuyuan";
+
+        //3.获取数组中指定下标的值
+        console.log(arr[0]);
+        console.log(arr[1]);
+        console.log(arr[2]);//若数组中该下标还没有存值，则输出undefined(因为要获取没有定义的对象的属性默认就是undefined)而不是报下标越界异常。
+
+        //4.获取数组的长度
+        console.log(arr.length);//lenth可以被修改，自己指定数组的长度。
+
+        //5.总是向数组最后一位添加元素
+        arr[arr.length] = 23;
+
+
+
+        /**
+         * 数组的常用方法
+         *  - push(): 向数组的末尾添加一个或多个元素，返回值值新数组的长度。
+         *  - pop(): 删除数组的最后一个元素,返回值是被删除的元素值。
+         *  - unshift(): 向数组的开头添加一个或多个元素，返回值是新数组的长度。新元素的索引是0，其他原来的元素会依次后移。
+         *  - shift(): 删除数组的第一个元素，返回值是被删除的元素值。删除后其他元素会依次向前移动。
+         */
+        let array = ["wu","yuan","wang","yi","jun"];
+        console.log(array);
+
+        //push()
+        array.push("ginoii","haha");
+        console.log(array);
+
+        //pop()
+        array.pop();
+        console.log(array);
+
+        //unshift()
+        array.unshift("hai","hello");
+        console.log(array);
+
+        //shift()
+        array.shift();
+        console.log(array);
+
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

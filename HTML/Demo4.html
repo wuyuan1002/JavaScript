@@ -73,14 +73,14 @@
 
 
         //如果是普通调用函数的话，函数内this指向的是该函数的调用者
-        let parent = {
+        let people = {
             age: 1,
-            child: function () {
+            setAge: function () {
                 this.age = 2;
             }
         };
-        parent.child();
-        alert(parent.age);//输出是2，说明修改了parent的age属性值，说明这样调用child里面的this指向的是它的调用者。
+        people.setAge();
+        alert(people.age);//输出是2，说明修改了parent的age属性值，说明这样调用child里面的this指向的是它的调用者。
 
 
     </script>
